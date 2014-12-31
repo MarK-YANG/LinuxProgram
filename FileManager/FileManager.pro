@@ -17,7 +17,8 @@ SOURCES += main.cpp\
     aboutdlg.cpp
 
 HEADERS  += mainwindow.h \
-    aboutdlg.h
+    aboutdlg.h \
+    CFileNode.h
 
 FORMS    += mainwindow.ui \
     aboutdlg.ui

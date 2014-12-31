@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>772</width>
+    <height>351</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="menu.qrc">
+    <normaloff>:/File/images/皮卡丘.png</normaloff>:/File/images/皮卡丘.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border-color:rgb(255, 255, 255)</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>2</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout"/>
+   </widget>
+   <widget class="QWidget" name="searchWidget" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>581</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>0</y>
+       <width>71</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(39, 198, 255)</string>
+     </property>
+     <property name="text">
+      <string>全盘搜索 </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>0</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(:/File/images/s1.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>0</y>
+       <width>51</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(0, 170, 255)</string>
+     </property>
+     <property name="text">
+      <string>取消</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>0</y>
+       <width>371</width>
+       <height>27</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>0</y>
+      <width>371</width>
+      <height>27</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="curLabel">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>0</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image:url(:/File/images/foler.png)</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lOutput">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>50</y>
+      <width>471</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>772</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="action_W"/>
+    <addaction name="action_F"/>
+    <addaction name="action_D"/>
+    <addaction name="separator"/>
+    <addaction name="action_P"/>
+    <addaction name="separator"/>
+    <addaction name="action_C"/>
+   </widget>
+   <widget class="QMenu" name="menu_E">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="action_U"/>
+    <addaction name="action_R"/>
+    <addaction name="separator"/>
+    <addaction name="action_C_2"/>
+    <addaction name="action_C_3"/>
+    <addaction name="action_P_2"/>
+    <addaction name="separator"/>
+    <addaction name="action_A_2"/>
+    <addaction name="action_14"/>
+    <addaction name="separator"/>
+    <addaction name="action_R_2"/>
+    <addaction name="separator"/>
+    <addaction name="action_D_2"/>
+   </widget>
+   <widget class="QMenu" name="menu_V">
+    <property name="title">
+     <string>查看</string>
+    </property>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>查看方式</string>
+     </property>
+     <addaction name="action_L"/>
+     <addaction name="action_8"/>
+    </widget>
+    <addaction name="refresh"/>
+    <addaction name="separator"/>
+    <addaction name="menu_2"/>
+    <addaction name="separator"/>
+    <addaction name="showSideBar"/>
+   </widget>
+   <widget class="QMenu" name="menu_J">
+    <property name="title">
+     <string>转到</string>
+    </property>
+    <addaction name="action_9"/>
+    <addaction name="action_10"/>
+    <addaction name="separator"/>
+    <addaction name="action_B"/>
+    <addaction name="action_F_2"/>
+    <addaction name="separator"/>
+    <addaction name="action_L_2"/>
+    <addaction name="action_S"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>历史</string>
+    </property>
+    <addaction name="action_16"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_A"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_E"/>
+   <addaction name="menu_V"/>
+   <addaction name="menu_J"/>
+   <addaction name="menu_H"/>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(61, 197, 255)</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_B"/>
+   <addaction name="action_F_2"/>
+   <addaction name="separator"/>
+   <addaction name="action_F"/>
+   <addaction name="action_D"/>
+   <addaction name="separator"/>
+   <addaction name="action_C_2"/>
+   <addaction name="action_C_3"/>
+   <addaction name="action_P_2"/>
+   <addaction name="separator"/>
+   <addaction name="refresh"/>
+   <addaction name="separator"/>
+   <addaction name="action_L"/>
+   <addaction name="action_8"/>
+   <addaction name="separator"/>
+   <addaction name="action_P"/>
+   <addaction name="separator"/>
+   <addaction name="action_S"/>
+  </widget>
+  <widget class="QDockWidget" name="leftWidget">
+   <property name="minimumSize">
+    <size>
+     <width>169</width>
+     <height>41</height>
+    </size>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>位置</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>171</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Home</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>50</y>
+       <width>171</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>桌面</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>171</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>下载</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>110</y>
+       <width>171</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>文档</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>140</y>
+       <width>171</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>回收站</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>118</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_8">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>200</y>
+       <width>171</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>计算机</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>180</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>设备</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>121</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <action name="action_A">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/about.png</normaloff>:/File/images/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>关于（&amp;A）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+A</string>
+   </property>
+  </action>
+  <action name="action_W">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/newWnd.png</normaloff>:/File/images/newWnd.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建窗口（&amp;W）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_F">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/newFold.png</normaloff>:/File/images/newFold.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建文件夹（&amp;F）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+N</string>
+   </property>
+  </action>
+  <action name="action_D">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/new.ico</normaloff>:/File/images/new.ico</iconset>
+   </property>
+   <property name="text">
+    <string>新建文档（&amp;D）</string>
+   </property>
+  </action>
+  <action name="action_P">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/attribute.png</normaloff>:/File/images/attribute.png</iconset>
+   </property>
+   <property name="text">
+    <string>属性（&amp;P）</string>
+   </property>
+  </action>
+  <action name="action_C">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/close.png</normaloff>:/File/images/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>关闭（&amp;C）</string>
+   </property>
+  </action>
+  <action name="action_U">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/undo.png</normaloff>:/File/images/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>撤销（&amp;U）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="action_R">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/redo.png</normaloff>:/File/images/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>重做（&amp;R）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="action_C_2">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/cut.png</normaloff>:/File/images/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>剪切（&amp;X）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="action_C_3">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/copy.png</normaloff>:/File/images/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>复制（&amp;C）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_P_2">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/paste.png</normaloff>:/File/images/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>粘贴（&amp;P）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="action_A_2">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/selectAll.png</normaloff>:/File/images/selectAll.png</iconset>
+   </property>
+   <property name="text">
+    <string>全选（&amp;A）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="action_R_2">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/rename.png</normaloff>:/File/images/rename.png</iconset>
+   </property>
+   <property name="text">
+    <string>重命名（&amp;R&amp;N）</string>
+   </property>
+  </action>
+  <action name="refresh">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/refresh.png</normaloff>:/File/images/refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>刷新（&amp;R）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+R</string>
+   </property>
+  </action>
+  <action name="action_L">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/list.png</normaloff>:/File/images/list.png</iconset>
+   </property>
+   <property name="text">
+    <string>列表（&amp;L）</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/icon.png</normaloff>:/File/images/icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>图标（&amp;I）</string>
+   </property>
+  </action>
+  <action name="action_9">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/up.png</normaloff>:/File/images/up.png</iconset>
+   </property>
+   <property name="text">
+    <string>上一级</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Up</string>
+   </property>
+  </action>
+  <action name="action_10">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/down.png</normaloff>:/File/images/down.png</iconset>
+   </property>
+   <property name="text">
+    <string>下一级</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Down</string>
+   </property>
+  </action>
+  <action name="action_B">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/backward.png</normaloff>:/File/images/backward.png</iconset>
+   </property>
+   <property name="text">
+    <string>后退 （&amp;B）</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Left</string>
+   </property>
+  </action>
+  <action name="action_F_2">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/forward.png</normaloff>:/File/images/forward.png</iconset>
+   </property>
+   <property name="text">
+    <string>前进（&amp;F）</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Right</string>
+   </property>
+  </action>
+  <action name="action_L_2">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/location.png</normaloff>:/File/images/location.png</iconset>
+   </property>
+   <property name="text">
+    <string>位置（&amp;L）</string>
+   </property>
+  </action>
+  <action name="action_S">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/search.png</normaloff>:/File/images/search.png</iconset>
+   </property>
+   <property name="text">
+    <string>搜索（&amp;S）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="action_14">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/20141224123334467_easyicon_net_50.png</normaloff>:/File/images/20141224123334467_easyicon_net_50.png</iconset>
+   </property>
+   <property name="text">
+    <string>反选</string>
+   </property>
+  </action>
+  <action name="action_D_2">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/delete.png</normaloff>:/File/images/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>删除（&amp;D）</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Backspace</string>
+   </property>
+  </action>
+  <action name="action_16">
+   <property name="icon">
+    <iconset resource="menu.qrc">
+     <normaloff>:/File/images/CH.png</normaloff>:/File/images/CH.png</iconset>
+   </property>
+   <property name="text">
+    <string>清空历史记录</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Backspace</string>
+   </property>
+  </action>
+  <action name="showSideBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>显示侧边栏</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="menu.qrc"/>
+ </resources>
+ <connections/>
+</ui>

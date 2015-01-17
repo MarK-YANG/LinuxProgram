@@ -6,6 +6,7 @@
 #include <QWidget>
 #include <vector>
 #include "CFileNode.h"
+#include <QListWidgetItem>
 
 using namespace std;
 
@@ -43,6 +44,8 @@ private slots:
     void on_showSideBar_triggered();
 
     void on_pushButton_clicked();
+
+    void on_outPutListWidget_itemDoubleClicked(QListWidgetItem *item);
 
 private:
     Ui::MainWindow *ui;

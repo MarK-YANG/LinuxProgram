@@ -134,18 +134,38 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="lOutput">
+   <widget class="QScrollArea" name="scrollArea">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>50</y>
-      <width>471</width>
-      <height>211</height>
+      <x>49</x>
+      <y>39</y>
+      <width>511</width>
+      <height>221</height>
      </rect>
     </property>
-    <property name="text">
-     <string/>
+    <property name="widgetResizable">
+     <bool>true</bool>
     </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>509</width>
+       <height>219</height>
+      </rect>
+     </property>
+     <widget class="QListWidget" name="outPutListWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>461</width>
+        <height>191</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">

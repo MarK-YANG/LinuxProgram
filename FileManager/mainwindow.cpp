@@ -4,6 +4,7 @@
 #include <QLabel>
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <dirent.h>
 #include <string.h>
 #include <sys/stat.h>
@@ -137,19 +138,60 @@ void MainWindow::on_showSideBar_triggered()
 void MainWindow::on_pushButton_clicked()
 {
    string outPut ="";
-   if(!ui->lineEdit_2->text().isNull())
-   {
+   string searchWord = ui->lineEdit_2->text().toStdString();
 
+   if(searchWord == "")
+   {
+       ui->outPutListWidget->clear();
+       /*for(int i = 0; i < result.size(); ++i)
+       {
+            outPut = result[i]->getNodeName()+"\t\t"+result[i]->getNodePath();
+            ui->outPutListWidget->addItem((QString(QString::fromLocal8Bit(outPut.c_str()))));
+       }*/
+       outPut = "Please input a keyword :)";
+       ui->outPutListWidget->addItem((QString(QString::fromLocal8Bit(outPut.c_str()))));
+   }
+   else
+   {
+       ui->outPutListWidget->clear();
+
+       for(int i = 0; i < result.size(); ++i)
+       {
+           if(result[i]->containKeyWord(searchWord))
+           {
+                outPut = result[i]->getNodeName()+"\t"+result[i]->getNodePath();
+                ui->outPutListWidget->addItem((QString(QString::fromLocal8Bit(outPut.c_str()))));
+           }
+       }
    }
 
-   if(result.size() == 0)
+   if(ui->outPutListWidget->count() == 0)
    {
-       outPut = "Error in path";
+       outPut = "No result :(";
+       ui->outPutListWidget->addItem((QString(QString::fromLocal8Bit(outPut.c_str()))));
    }
-   for(int i = 0; i < result.size(); ++i)
-   {
-        outPut += result[i]->getNodeName()+"\t"+result[i]->getNodePath()+"\n";
-   }
+   //ui->lOutput->setText(QString(QString::fromLocal8Bit(outPut.c_str())));
+}
 
-   ui->lOutput->setText(QString(QString::fromLocal8Bit(outPut.c_str())));
+
+void MainWindow::on_outPutListWidget_itemDoubleClicked(QListWidgetItem *item)
+{
+
+    string text = item->text().toStdString();
+    if(text.find('\t') == text.npos)
+    {
+        return;
+    }
+    else
+    {
+        int iConsor = text.find('\t');
+        string sName = text.substr(0,iConsor);
+        string sPath = text.substr(iConsor+1, text.length());
+
+        string command = "nautilus " + sPath + sName;
+
+        system(command.c_str());
+    }
+
+    //result[iNum]-> openCurrent();
 }
